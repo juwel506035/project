@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Management App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <div class="container my-5">
+
+        <div class="row mb-4 gap-2">
+            <div class="col-md-8">
+                <input id="searchInput" type="text" class="form-control" placeholder="Search for drinks">
+            </div>
+            <div class="col-md-2">
+                <button id="searchButton" class="btn btn-primary w-100">Search</button>
+            </div>
+        </div>
+
+         <div class="row py-5">
+            <div class="col-md-8">
+                <div id="drinkList" class="row g-3">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-light text-black text-center">
+                        <h5>Total cart : <span id="count">0</span></h5>
+                    </div>
+                    <div class="card-body">
+                        <ul id="groupList" class="list-group mb-3">
+                        </ul>
+                        <p>Total Drinks: <span id="drinkCount">0</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="drinkModal" tabindex="-1" aria-labelledby="drinkModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="drinkModalLabel">Drink Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalContent">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+     
+</body>
+</html>
